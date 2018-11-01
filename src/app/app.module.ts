@@ -8,6 +8,8 @@ import { ROUTING } from './app.routing';
 import { ProfileComponent } from './profile/profile.component';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
+import { NaviagtionComponent } from './naviagtion/naviagtion.component';
+import { SideBarComponent } from './side-bar/side-bar.component';
 
 
 @NgModule({
@@ -17,6 +19,8 @@ import { LoginComponent } from './login/login.component';
     ProfileComponent,
     AdminComponent,
     LoginComponent,
+    NaviagtionComponent,
+    SideBarComponent,
   ],
   imports: [
     BrowserModule,
