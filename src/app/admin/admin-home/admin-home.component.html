@@ -1,0 +1,31 @@
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card" *ngIf="firststeps">
+                <div class="card-header">
+                    Create a Workflow
+                </div>
+                <div class="card-body">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" [(ngModel)]="title" placeholder="Workflow Title" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2" (click)="firstStep()" >Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card" *ngIf="secondsteps">
+                <div class="card-header">
+                    Add wokflow item
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li *ngFor="let item of items | async">
+                            <app-item-card [item]="item"></app-item-card>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

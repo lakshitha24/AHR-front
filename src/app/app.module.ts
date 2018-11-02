@@ -10,6 +10,8 @@ import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
 import { NaviagtionComponent } from './naviagtion/naviagtion.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
+import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
+import { ItemCardComponent } from './admin/item-card/item-card.component';
 
 
 @NgModule({
@@ -21,6 +23,8 @@ import { SideBarComponent } from './side-bar/side-bar.component';
     LoginComponent,
     NaviagtionComponent,
     SideBarComponent,
+    AdminHomeComponent,
+    ItemCardComponent,
   ],
   imports: [
     BrowserModule,
