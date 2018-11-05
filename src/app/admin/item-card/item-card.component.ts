@@ -1,4 +1,4 @@
-import { Component, OnInit , Input } from '@angular/core';
+import { Component, OnInit , EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-item-card',
@@ -7,9 +7,16 @@ import { Component, OnInit , Input } from '@angular/core';
 })
 export class ItemCardComponent implements OnInit {
     @Input() item;
+    @Output() addItem = new EventEmitter<boolean>();
+    added = false;
   constructor() { }
 
   ngOnInit() {
   }
+
+    addItems(){
+        this.addItem.emit(true);
+        this.added = true;
+    }
 
 }

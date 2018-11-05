@@ -12,6 +12,8 @@ import { NaviagtionComponent } from './naviagtion/naviagtion.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 import { ItemCardComponent } from './admin/item-card/item-card.component';
+import { DndListModule } from 'ngx-drag-and-drop-lists';
+import { ContainerComponent } from './components/container.component';
 
 
 @NgModule({
@@ -25,12 +27,14 @@ import { ItemCardComponent } from './admin/item-card/item-card.component';
     SideBarComponent,
     AdminHomeComponent,
     ItemCardComponent,
+      ContainerComponent,
   ],
   imports: [
     BrowserModule,
       ROUTING,
       FormsModule,
-      ReactiveFormsModule
+      ReactiveFormsModule,
+      DndListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

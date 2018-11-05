@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 
 
 interface item {
-    id: number,
+    id: number
 
 }
 @Component({
@@ -13,16 +13,18 @@ interface item {
 export class AdminHomeComponent implements OnInit {
 
     firststeps: boolean = true;
-    secondsteps: boolean = true;
+    secondsteps: boolean = false;
     title: string;
     items: any = [];
+    message:string;
+
+
 
     constructor() {
     }
 
     ngOnInit() {
-        this.items.push('text_area' + (this.items.length + 1));
-
+        this.items.push({'item': this.items.length + 1});
     }
 
     firstStep() {
@@ -30,8 +32,12 @@ export class AdminHomeComponent implements OnInit {
             this.firststeps = false;
             this.secondsteps = true;
         }
-        this.items.push('text_area' + (this.items.length + 1));
+    }
 
+    added(add: boolean) {
+       if (add) {
+           this.items.push({'item': this.items.length + 1});
+       }
     }
 
 }

@@ -21,9 +21,21 @@
                 <div class="card-body">
                     <ul>
                         <li *ngFor="let item of items">
-                            <app-item-card [item]="item"></app-item-card>
+                            {{message}}
+                            <app-item-card [item]="item"  (addItem)="added($event)"></app-item-card>
                         </li>
                     </ul>
+                    <!--<ul [dndList]-->
+
+                        <!--[dndModel]="items">-->
+                        <!--<li *ngFor="let item of items"-->
+                            <!--[dndType]="'item'"-->
+
+                            <!--[dndDraggable]-->
+                            <!--[dndObject]="item">-->
+                            <!--<app-item-card [item]="item"></app-item-card>-->
+                        <!--</li>-->
+                    <!--</ul>-->
                 </div>
             </div>
         </div>
