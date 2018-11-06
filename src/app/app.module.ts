@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ROUTING } from './app.routing';
-import { ProfileComponent } from './profile/profile.component';
+import { ProfileComponent } from './home/profile/profile.component';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
 import { NaviagtionComponent } from './naviagtion/naviagtion.component';
